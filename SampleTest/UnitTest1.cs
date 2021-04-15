@@ -1,4 +1,5 @@
 using System;
+using NUnit.Allure.Core;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -6,6 +7,7 @@ using OpenQA.Selenium.Remote;
 
 namespace SampleTest
 {
+    [AllureNUnit]
     public class Tests
     {
         private IWebDriver _driver;
