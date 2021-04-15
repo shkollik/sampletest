@@ -1,4 +1,6 @@
 using System;
+using Allure.Commons;
+using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using OpenQA.Selenium;
@@ -29,7 +31,9 @@ namespace SampleTest
             _driver = new RemoteWebDriver(new Uri("http://127.0.0.1:4444/wd/hub"), driverOptions);
         }
 
-        [Test]
+        [Test(Description="Check Title on main page")]
+        [AllureTag("Smoke")]
+        [AllureSeverity(SeverityLevel.normal)]
         public void CheckTitleMainPage()
         {
             _driver.Navigate().GoToUrl("https://duckduckgo.com/");
